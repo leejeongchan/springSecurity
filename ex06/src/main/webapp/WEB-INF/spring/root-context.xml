@@ -32,10 +32,10 @@
 		<constructor-arg ref="hikariConfig" />
 	</bean>
 
-	<!--  <bean id="sqlSessionFactory"
+	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-	</bean>-->
+	</bean>
 
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -43,7 +43,9 @@
 	</bean>
 
 	<tx:annotation-driven />
-
+	
+	<!-- 마이바티스 매퍼 -->
+	<mybatis-spring:scan base-package="org.zerock.mapper"/>	
 
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
