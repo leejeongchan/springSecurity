@@ -29,6 +29,7 @@
 		<!-- 로그인 성공시 customLoginSuccess를 통해 리다이렉트 처리 -->
 		<security:form-login login-page="/customLogin" authentication-success-handler-ref="customLoginSuccess"/>
 		<security:logout logout-url="/customLogout" invalidate-session="true"/>
+		<security:remember-me data-source-ref="dataSource" token-validity-seconds="604800"/>
 	</security:http>
 	
 	<security:authentication-manager>

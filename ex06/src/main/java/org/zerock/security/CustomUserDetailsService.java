@@ -19,12 +19,12 @@ public class CustomUserDetailsService implements UserDetailsService{
 	
 	//UserDetails는 CustomUser를 User를 상속받아 작성한다. 이를 리턴해준다. 
 	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 		
-		log.warn("Load User By userName : "+username);
+		log.warn("Load User By userName : "+userName);
 		//username is userid
-		MemberVO vo =memberMapper.read(username);
+		MemberVO vo =memberMapper.read(userName);
 		
 		log.warn("quired by member mapper: "+vo);
 		

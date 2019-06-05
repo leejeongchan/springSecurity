@@ -7,7 +7,7 @@
 	<resultMap type="org.zerock.domain.MemberVO" id="memberMap">
 		<id property="userid" column="userid"/>
 		<result property="userpw" column="userpw"/>
-		<result property="username" column="username"/>
+		<result property="userName" column="username"/>
 		<result property="regDate" column="regdate"/>
 		<result property="updateDate" column="updatedate"/>
 		<collection property="authList" resultMap="authMap"></collection>
